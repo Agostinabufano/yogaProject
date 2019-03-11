@@ -1,0 +1,147 @@
+body {
+  background-color: beige;
+  font-family: "Sniglet", cursive;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+}
+
+h1 {
+  font-size: 80px;
+  text-align: center;
+  color: whitesmoke;
+  width: 700px;
+  height: auto;
+  background-color: gray;
+  margin-left: 180px;
+  border-radius: 10px;
+}
+
+.divAsanasContainer {
+  display: flex;
+  flex-direction: column;
+}
+.divAsanasContainer .asanaContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 100px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  background-color: whitesmoke;
+  margin-top: 5px;
+  border-radius: 10px;
+}
+.divAsanasContainer .asanaContainer img {
+  margin: 10px;
+  width: 30%;
+  border-radius: 10px;
+}
+.divAsanasContainer .asanaContainer .namesContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.divAsanasContainer .asanaContainer .namesContainer .name {
+  font-size: 25px;
+  margin: 5px;
+  color: hotpink;
+}
+.divAsanasContainer .asanaContainer .namesContainer .english {
+  color: black;
+}
+.divAsanasContainer .asanaContainer .namesContainer .intro {
+  color: gray;
+  font-size: 15px;
+}
+.divAsanasContainer .asanaContainer button {
+  background-color: pink;
+  border: 0px;
+  border-radius: 5px;
+  width: 100px;
+  margin-left: 235px;
+  font-family: "Sniglet", cursive;
+  color: grey;
+  cursor: pointer;
+}
+
+.modal {
+  background-color: whitesmoke;
+  position: absolute;
+  left: 50%;
+  margin-left: -400px;
+  margin-top: 100px;
+  width: 80%;
+  height: auto;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  border: solid pink 10px;
+}
+.modal .close {
+  color: grey;
+  margin-left: 97%;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  height: 230px;
+  justify-content: space-around;
+}
+.container img {
+  height: auto;
+}
+.container .poseNames {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container .poseNames .name {
+  margin: 0%;
+  text-align: center;
+}
+.container .poseNames h3 {
+  color: hotpink;
+}
+.container .poseNames .poseInformation {
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+}
+.container .poseNames .poseInformation .info {
+  width: 50%;
+  margin: 10px;
+}
+.container .poseNames .poseInformation .info span {
+  font-size: 10px;
+}
+.container .poseNames .poseInformation .info .benefits {
+  color: #149614;
+}
+.container .poseNames .poseInformation .info .contraindications {
+  color: red;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+.details .instructions {
+  align-items: center;
+  text-align: center;
+  width: 90%;
+  margin: 10px;
+}
+.details .instructions span {
+  font-size: 13px;
+}
+
+h4 {
+  margin: 0%;
+  color: grey;
+}
+
+/*# sourceMappingURL=levels.css.map */

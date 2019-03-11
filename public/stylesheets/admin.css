@@ -1,0 +1,12 @@
+body {
+  font-family: "Sniglet", cursive;
+  background-color: beige;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: end;
+}
+
+/*# sourceMappingURL=admin.css.map */

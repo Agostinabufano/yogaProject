@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Sniglet" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="/yoga/stylesheets/levels.css">
+    <title>Asanas</title>
+</head>
+
+<body>
+    <div id="app" class="divAsanasContainer">
+        <h1>{{title}} Asanas</h1>
+        <div v-for="(asana, index) in asanas" class="asanaContainer">
+            <div class="namesContainer">
+                <p class="name">{{asana.name}}</p>
+                <p class="name english">{{asana.englishName}}</p>
+                <p class="intro">{{asana.introduction}}</p>
+                <button v-on:click="showAsanaDetail(index)">Asana Detail</button>
+            </div>
+            <img v-bind:src="asana.img" alt="">
+            <div v-if="asana.showModal" class="modal">
+                <div v-on:click="showAsanaDetail(index)" class="close">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="container">
+                    <div class="poseNames">
+                        <h3 class="name">{{asana.name}}</h3>
+                        <h2 class="name">{{asana.englishName}}</h2>
+                        <div class="poseInformation">
+                            <div class="info">
+                                <h4 class="benefits">Benefits</h4>
+                                <span class="benefits">{{asana.benefits}}</span>
+                            </div>
+                            <div class="info">
+                                <h4 class="contraindications">Contraindications</h4>
+                                <span class="contraindications">{{asana.contraindications}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <img v-bind:src="asana.img" alt="">
+                </div>
+                <div class="details">
+                    <div class="instructions">
+                        <h4>Instructions</h4>
+                        <span v-for="">{{asana.instructions}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="/yoga/javascripts/levels.js"></script>
+</body>
+
+</html>
