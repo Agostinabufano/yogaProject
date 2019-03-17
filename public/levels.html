@@ -14,6 +14,7 @@
 
 <body>
     <div id="app" class="divAsanasContainer">
+        <button class="back" v-on:click="returnHome">Back</button>
         <h1>{{title}} Asanas</h1>
         <div v-for="(asana, index) in asanas" class="asanaContainer">
             <div class="namesContainer">
@@ -23,6 +24,7 @@
                 <button v-on:click="showAsanaDetail(index)">Asana Detail</button>
             </div>
             <img v-bind:src="asana.img" alt="">
+            <div v-if="asana.showModal" class="overlay"></div>
             <div v-if="asana.showModal" class="modal">
                 <div v-on:click="showAsanaDetail(index)" class="close">
                     <i class="fas fa-times"></i>
@@ -47,11 +49,16 @@
                 <div class="details">
                     <div class="instructions">
                         <h4>Instructions</h4>
-                        <span v-for="">{{asana.instructions}}</span>
+                        <ul>
+                            <li v-for="instruction in asana.instructions">{{instruction}}</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="scrollTop">
+        <i class="fas fa-chevron-up" id="scroll"></i>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>

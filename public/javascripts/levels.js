@@ -7,6 +7,9 @@ var app = new Vue({
     methods: {
         showAsanaDetail: function (index) {
             this.asanas[index].showModal = !this.asanas[index].showModal;
+        },
+        returnHome: function () {
+            location.href = "/yoga/home"
         }
     }
 })
@@ -15,10 +18,8 @@ function getData(url) {
     $.get(url, function (data) {
         for (var i = 0; i < data.length; i++) {
             data[i].showModal = false;
+            data[i].instructions = data[i].instructions.split("*");
             app.asanas.push(data[i]);
-            var instructions = data[i].instructions.split("*");
-            app.asanas.instructions.push(instructions)
-            console.log(instructions);
         }
     })
 }
@@ -34,3 +35,8 @@ if (difficulty[2] === "beginner") {
     app.title = "Advanced";
     getData('/yoga/api/' + difficulty[2])
 }
+
+$("#scroll").on("click", function () {
+    document.body.scrollTop = 0; 
+    document.documentElement.scrollTop = 0; 
+})
