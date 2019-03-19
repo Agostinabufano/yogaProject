@@ -15,7 +15,7 @@ body {
 .bigContainer h1 {
   font-family: "Sniglet", cursive;
   font-size: 100px;
-  margin: 0px;
+  margin: 15px;
   width: 400px;
 }
 .bigContainer .imgContainer {

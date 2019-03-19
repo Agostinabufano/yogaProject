@@ -4,21 +4,25 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 90%;
+  width: 100%;
+  margin: 0px;
 }
 
 h1 {
   font-size: 80px;
   text-align: center;
   color: whitesmoke;
-  width: 700px;
+  width: 80%;
   height: auto;
   background-color: gray;
-  margin-left: 180px;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
   border-radius: 10px;
 }
 
 .divAsanasContainer {
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -26,12 +30,13 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-left: 100px;
+  margin: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   background-color: whitesmoke;
-  margin-top: 5px;
+  margin-top: 15px;
   border-radius: 10px;
+  width: 90%;
 }
 .divAsanasContainer .asanaContainer img {
   margin: 10px;
@@ -40,8 +45,11 @@ h1 {
 }
 .divAsanasContainer .asanaContainer .namesContainer {
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  margin: 15px 0px 15px 0px;
 }
 .divAsanasContainer .asanaContainer .namesContainer .name {
   font-size: 25px;
@@ -55,12 +63,11 @@ h1 {
   color: gray;
   font-size: 15px;
 }
-.divAsanasContainer .asanaContainer button {
+.divAsanasContainer .asanaContainer .namesContainer button {
   background-color: pink;
   border: 0px;
   border-radius: 5px;
   width: 100px;
-  margin-left: 235px;
   font-family: "Sniglet", cursive;
   color: grey;
   cursor: pointer;
@@ -69,12 +76,11 @@ h1 {
 .modal {
   background-color: whitesmoke;
   position: absolute;
-  left: 50%;
-  margin-left: -400px;
+  margin-left: auto;
   margin-top: 100px;
   width: 80%;
   height: auto;
-  z-index: 1;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
@@ -130,18 +136,55 @@ h1 {
   flex-direction: column;
 }
 .details .instructions {
-  align-items: center;
-  text-align: center;
   width: 90%;
   margin: 10px;
 }
-.details .instructions span {
+.details .instructions ul {
   font-size: 13px;
 }
 
 h4 {
   margin: 0%;
   color: grey;
+}
+
+.overlay {
+  background-color: grey;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.5;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.back {
+  border: 0px;
+  border-radius: 5px;
+  width: 100px;
+  cursor: pointer;
+  font-family: "Sniglet", cursive;
+  justify-content: center;
+  color: grey;
+}
+
+.scrollTop {
+  margin-left: 50%;
+  margin-top: 5px;
+  width: 30px;
+  height: 30px;
+  background-color: grey;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.scrollTop .fa-chevron-up {
+  color: white;
 }
 
 /*# sourceMappingURL=levels.css.map */
